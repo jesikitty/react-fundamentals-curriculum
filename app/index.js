@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-function Hello() {
-	return <div>Hello World!</div>;
-}
+import routes from './config/routes';
 
 ReactDOM.render(
-	<Hello />, 
+	routes, 
 	document.getElementById('app')
 );
