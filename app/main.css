@@ -91,3 +91,18 @@ header .form-group button {
 .day h3 {
 	font-size: 18px;
 }
+
+.detailed-day {
+	text-align: center;
+	width: 50%;
+	margin: 50px auto;
+}
+
+.detailed-day img {
+	height: 200px;
+}
+
+.detailed-day p {
+	font-size: 24px;
+	margin-top: 25px;
+}

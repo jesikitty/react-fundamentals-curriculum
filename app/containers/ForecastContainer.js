@@ -29,7 +29,7 @@ class ForecastContainer extends React.Component {
 
 	handleDayClick(weather) {
 		this.context.router.push({
-			pathname: '/detail/' + this.props.routeParams.city,
+			pathname: '/detail/' + this.props.params.city,
 			state: { weather: weather }
 		});
 	}
