@@ -10,6 +10,10 @@ h1 {
 	color: #fff;
 }
 
+h2 {
+	text-align: center;
+}
+
 .texture-bg {
 	width: 100%;
 	height: 95%;
