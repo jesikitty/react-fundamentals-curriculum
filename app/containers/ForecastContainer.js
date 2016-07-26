@@ -5,7 +5,10 @@ import Forecast from '../components/Forecast';
 class ForecastContainer extends React.Component {
 	constructor(props) {
 	  	super(props);
-	  	this.state = {isLoading: props.isLoading};
+	  	this.state = {
+	  		isLoading: props.isLoading,
+	  		weather: []
+	  	};
 	}
 
 	componentDidMount() {
@@ -44,6 +47,9 @@ class ForecastContainer extends React.Component {
 }
 
 ForecastContainer.contextTypes = { router: React.PropTypes.object.isRequired };
-ForecastContainer.defaultProps = { isLoading: true };
+ForecastContainer.defaultProps = { 
+	isLoading: true, 
+	weather: []
+};
 
 export default ForecastContainer;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (props) => (
+const WeatherForm = (props) => (
 	<form onSubmit={props.onSubmitLocation}>
 		<div className='form-group'>
 	    	<input type='text' className='form-control' placeholder='St. George, Utah' />
@@ -10,3 +10,9 @@ export default (props) => (
 	  	</div>
 	</form>
 );
+
+WeatherForm.propTypes = {
+	onSubmitLocation: React.PropTypes.func.isRequired
+};
+
+export default WeatherForm;

@@ -13,13 +13,20 @@ function formatDays(days, onDayClick) {
 	));
 }
 
-export default (props) => (
+const Forecast = (props) => (
 	props.isLoading
 	? <h2>LOADING</h2>
 	: <div className='days-wrapper'>
 		<h2>{props.city}</h2>
-		<div>
-			{formatDays(props.weather, props.onDayClick)}
-		</div>
+		{formatDays(props.weather, props.onDayClick)}
 	  </div>
 );
+
+Forecast.propTypes = {
+	isLoading: React.PropTypes.bool.isRequired,
+	city: React.PropTypes.string.isRequired,
+	onDayClick: React.PropTypes.func.isRequired,
+	weather: React.PropTypes.array.isRequired
+};
+
+export default Forecast;
