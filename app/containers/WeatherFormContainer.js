@@ -1,10 +1,12 @@
 import React from 'react';
 import WeatherForm from '../components/WeatherForm';
+import weatherMapHelpers from '../utils/weatherMapHelpers';
 
 class WeatherFormContainer extends React.Component {
 	handleSubmitLocation(event) {
 		event.preventDefault();
-		console.log(event.target.children[0].children[0].value);
+		const location = event.target.children[0].children[0].value;
+		weatherMapHelpers.getCurrentWeather();
 	}
 
 	render() {
