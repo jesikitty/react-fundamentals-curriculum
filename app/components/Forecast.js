@@ -5,9 +5,9 @@ function getDate(timestamp) {
 	return moment(timestamp * 1000).format('dddd, MMMM DD');
 }
 
-function formatDays(days) {
+function formatDays(days, onDayClick) {
 	return days.map((day, index) => (
-		<div key={index} className='day'>
+		<div key={index} className='day' onClick={onDayClick.bind(null, day)}>
 			<img 
 				src={`/app/images/weather-icons/${day.weather[0].icon}.svg`} 
 				alt={day.weather[0].main}
@@ -23,7 +23,7 @@ export default (props) => (
 	: <div className='days-wrapper'>
 		<h2>{props.city}</h2>
 		<div>
-			{formatDays(props.weather)}
+			{formatDays(props.weather, props.onDayClick)}
 		</div>
 	  </div>
 );

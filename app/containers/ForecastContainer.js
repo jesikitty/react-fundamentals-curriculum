@@ -27,14 +27,23 @@ class ForecastContainer extends React.Component {
 			});
 	}
 
+	handleDayClick(weather) {
+		this.context.router.push({
+			pathname: '/detail/' + this.props.routeParams.city,
+			state: { weather: weather }
+		});
+	}
+
 	render() {
 		return <Forecast 
 			isLoading={this.state.isLoading}
-			city={this.props.routeParams.city} 
+			city={this.props.routeParams.city}
+			onDayClick={(event) => this.handleDayClick(event)} 
 			weather={this.state.weather} />;
 	}
 }
 
+ForecastContainer.contextTypes = { router: React.PropTypes.object.isRequired };
 ForecastContainer.defaultProps = { isLoading: true };
 
 export default ForecastContainer;
