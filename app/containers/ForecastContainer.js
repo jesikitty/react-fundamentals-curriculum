@@ -3,8 +3,11 @@ import weatherMapHelpers from '../utils/weatherMapHelpers';
 import Forecast from '../components/Forecast';
 
 class ForecastContainer extends React.Component {
-	// weatherMapHelpers.getCurrentWeather(location);
-	// weatherMapHelpers.getFiveDayForecast(location);
+	componentDidMount() {
+		weatherMapHelpers.fetchCurrentWeather(this.props.routeParams.city)
+			.then(weather => console.log(weather));
+		// weatherMapHelpers.fetchFiveDayForecast(location);
+	}
 
 	render() {
 		return <Forecast />;
