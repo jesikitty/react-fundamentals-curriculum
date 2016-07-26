@@ -6,7 +6,8 @@ class WeatherFormContainer extends React.Component {
 	handleSubmitLocation(event) {
 		event.preventDefault();
 		const location = event.target.children[0].children[0].value;
-		weatherMapHelpers.getCurrentWeather();
+		weatherMapHelpers.getCurrentWeather(location);
+		// weatherMapHelpers.getFiveDayForecast(location);
 	}
 
 	render() {
