@@ -72,3 +72,22 @@ header .form-group button {
 	padding: 1px 6px;
 	box-sizing: border-box;
 }
+
+.days-wrapper {
+	text-align: center;
+	width: 75%;
+	margin: 50px auto;
+}
+
+.day {
+	display: inline-block;
+	padding: 50px 25px;
+}
+
+.day img {
+	height: 100px;
+}
+
+.day h3 {
+	font-size: 18px;
+}

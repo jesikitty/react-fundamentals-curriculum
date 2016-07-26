@@ -9,15 +9,20 @@ class ForecastContainer extends React.Component {
 	}
 
 	componentDidMount() {
-		weatherMapHelpers.fetchCurrentWeather(this.props.routeParams.city)
+		weatherMapHelpers.fetchFiveDayForecast(this.props.routeParams.city)
 			.then(weather => {
-				this.setState({isLoading: false});
+				this.setState({
+					isLoading: false,
+					weather: weather.list
+				});
 			});
-		// weatherMapHelpers.fetchFiveDayForecast(location);
 	}
 
 	render() {
-		return <Forecast isLoading={this.state.isLoading} />;
+		return <Forecast 
+			isLoading={this.state.isLoading}
+			city={this.props.routeParams.city} 
+			weather={this.state.weather} />;
 	}
 }
 
