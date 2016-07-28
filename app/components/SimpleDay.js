@@ -6,7 +6,7 @@ function formatDate(timestamp) {
 }
 
 const SimpleDay = (props) => (
-	<div>
+	<div className='simple-day'>
 		<img src={`/app/images/weather-icons/${props.icon}.svg`} alt={props.text} />
 		<h3>{formatDate(props.date)}</h3>
 	</div>

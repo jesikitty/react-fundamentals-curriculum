@@ -7,7 +7,7 @@ function kelvinToFahrenheit(temp) {
 
 export default (props) => {
 	const data = props.location.state.weather;
-	return (<div className='detailed-day'>
+	return (<div>
 				<SimpleDay
 					icon={data.weather[0].icon}
 					text={data.weather[0].main}

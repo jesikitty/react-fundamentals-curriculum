@@ -2,10 +2,10 @@ import React from 'react';
 import WeatherFormContainer from '../containers/WeatherFormContainer';
 
 export default () => (
-	<div className='texture-bg'>
-		<div className='home vertical-align col-md-6 col-md-offset-3 text-center'>
+	<div className='textured-background'>
+		<div className='vertical-center'>
 			<h1>Enter a City and State</h1>
-			<WeatherFormContainer />
+			<WeatherFormContainer style={'blockForm'} />
 		</div>
 	</div>
 );

@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from '../main.css';
-import WeatherFormContainer from '../containers/WeatherFormContainer';
+import Header from './Header'
+import '../styles/bootstrap.min.css';
+import '../styles/main.css';
 
 export default (props) => (
-	<div className='container-fluid'>
-		<header>
-			<WeatherFormContainer />
-			<h1 className='vertical-align'>Weather App</h1>
-		</header>
-		{props.children}
+	<div>
+		<Header />
+		<main>
+			{props.children}
+		</main>
 	</div>
 );

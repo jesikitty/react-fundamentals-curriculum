@@ -10,7 +10,7 @@ class ForecastContainer extends React.Component {
 	  		weather: []
 	  	};
 	}
-
+	
 	componentDidMount() {
 		this.updateWeatherData(this.props.params.city);
 	}
